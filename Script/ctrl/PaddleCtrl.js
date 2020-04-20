@@ -10,9 +10,9 @@ class PaddleCtrl {
     * @param {View} view : the view
     */
     constructor(paddle, view) {
+
         view.displayPaddle(paddle);
         $(document).mousemove((evt) => this.moveMouse(paddle, view, evt));
-        //$(document).mousemove(this.moveMouse.bind(this,paddle,view));
     }
 
     /**
@@ -23,10 +23,11 @@ class PaddleCtrl {
     * @param {MouseEvent} evt : the mouse event
     */
     moveMouse(paddle, view, evt) {
-        let val = evt.clientX - document.getElementById("scene").offsetLeft - 5; //-5px car c est l' epaisseur du bord                                                                          // 
-        paddle = new Paddle(/*evt.clientX*/val);                                 // de ma scene.
+
+        let val = evt.clientX - document.getElementById("scene").offsetLeft - 5   // -5px car c est l' epaisseur du 
+            - racketWidth / 2;                                                    // bord  de ma scene.                                                    // 
+        paddle = new Paddle(val);
         view.displayPaddle(paddle);
         console.log(evt.clientX);
-
     }
 }

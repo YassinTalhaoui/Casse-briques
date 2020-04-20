@@ -10,8 +10,13 @@ class View {
     */
    displayPaddle(paddle) {
 
+      if( paddle.getLeft()<=0){            //Limite gauche de ma scene.
+         document.getElementById("raquette").style.marginLeft = 0 + "px";
+      }else if( paddle.getLeft()>=864){    //Limite droite de ma scene.
+         document.getElementById("raquette").style.marginLeft = 864 + "px";
+      }else
       document.getElementById("raquette").style.marginLeft = paddle.getLeft() + "px";
-
+      console.log( paddle.getLeft() +"px" );
    }
 
    /**
@@ -21,8 +26,6 @@ class View {
    sceneLeft() {
 
       console.log(document.getElementById("scene").offsetLeft);
-
    }
 
 }
-

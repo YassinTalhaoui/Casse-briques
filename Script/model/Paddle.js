@@ -8,6 +8,7 @@ class Paddle {
      * @param {*} left : an integer.
      */
     constructor(left) {
+
         this._left = left;
     }
 
@@ -25,6 +26,7 @@ class Paddle {
      * @param {*} val : an integer.
      */
     moveTo(val) {
+     
         this._left = val;
         return this._left;
     }
