@@ -24,8 +24,14 @@
     </main>
 
     <script>
-
+        let paddle = new Paddle(900);
+        let view = new View();
+        view.displayPaddle(paddle);
+        alert("Prêt à bouger la raquette à gauche ?");
+        paddle.moveTo(0);
+        view.displayPaddle(paddle);
     </script>
+
 </body>
 
 </html>
