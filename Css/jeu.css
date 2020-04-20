@@ -1,0 +1,61 @@
+body{
+
+    display: grid;
+    grid-auto-rows: 1fr 4fr;
+    grid-template-areas: "header"
+                         "game";
+
+}
+
+header{
+
+    grid-area: header;
+    text-align: center;
+    background-color:  rgb(9, 45, 160);
+    color: white;
+    font-size: 17pt;
+
+}
+
+header h1{
+
+    margin-bottom: 1px;
+
+}
+
+header h3{
+
+    margin-top: 2px;
+
+}
+
+main{
+
+    grid-area: game;
+   
+}
+
+#scene{
+ 
+    border: solid 5px;
+    color: rgb(9, 45, 160);
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 600px;
+    width: 960px;
+    
+   
+}
+
+  #raquette{
+
+    background-color: rgb(9, 45, 160) ;
+    height: 16px;
+    width: 96px;
+    position: absolute ;
+    margin-left: 150px;
+    margin-top: 584px;
+    
+
+}
+

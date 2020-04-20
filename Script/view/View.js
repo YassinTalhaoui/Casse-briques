@@ -1,0 +1,7 @@
+class View{
+   displayPaddle(paddle){
+       
+   }
+        
+    
+}
