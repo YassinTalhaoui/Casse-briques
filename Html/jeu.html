@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../Script/model/Paddle.js"></script>
     <script src="../Script/view/View.js"></script>
+    <script src="../Script/ctrl/PaddleCtrl.js"></script>
     <title>Casse-Brique</title>
 </head>
 
@@ -24,12 +25,10 @@
     </main>
 
     <script>
-        let paddle = new Paddle(900);
+        let paddle = new Paddle(300);
         let view = new View();
-        view.displayPaddle(paddle);
-        alert("Prêt à bouger la raquette à gauche ?");
-        paddle.moveTo(0);
-        view.displayPaddle(paddle);
+        let paddleCtrl = new PaddleCtrl(paddle, view);
+        view.sceneLeft();
     </script>
 
 </body>
