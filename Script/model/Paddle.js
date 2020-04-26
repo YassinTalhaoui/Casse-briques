@@ -5,28 +5,26 @@ class Paddle {
 
     /**
      * Constructor of Paddle.
-     * @param {*} left : an integer.
+     * @param {number} left - an integer.
      */
     constructor(left) {
-
         this._left = left;
     }
 
     /**
      * Simple getter of _left.
+     * @returns _left.
      */
-    getLeft() {
-
+    get left() {
         return this._left;
     }
 
     /**
      * Returns the new position of the racket in relation to
      * the left edge of the scene. 
-     * @param {*} val : an integer.
+     * @param {number} val - an integer.
      */
     moveTo(val) {
-     
         this._left = val;
         return this._left;
     }

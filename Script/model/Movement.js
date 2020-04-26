@@ -14,7 +14,7 @@ class Movement {
     }
 
     /**
-     * Simple getter of deltaX.
+     * Simple getter of _deltaX.
      * @returns {number} deltaX - the horizontal variation of the position.
      */
     get deltaX() {
@@ -22,7 +22,7 @@ class Movement {
     }
 
     /**
-     * Simple getter of deltaY.
+     * Simple getter of _deltaY.
      * @returns {number} deltaY - the vertical variation of the position.
      */
     get deltaY() {
@@ -30,7 +30,7 @@ class Movement {
     }
 
     /**
-     * Simple setter of deltaX.
+     * Simple setter of _deltaX.
      * @param {number} value - an integer that represents 
      * the horizontal variation of the position.
      */
@@ -39,7 +39,7 @@ class Movement {
     }
 
     /**
-     * Simple setter of deltaY.
+     * Simple setter of _deltaY.
      * @param {number} value - an integer that represents 
      * the vertical variation of the position.
      */

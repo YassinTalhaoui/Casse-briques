@@ -10,6 +10,9 @@
     <script src="../Script/view/View.js"></script>
     <script src="../Script/ctrl/PaddleCtrl.js"></script>
     <script src="../Script/model/constants.js"></script>
+    <script src="../Script/model/Ball.js"></script>
+    <script src="../Script/model/Movement.js"></script>
+    <script src="../Script/model/Position.js"></script>
     <title>Casse-Brique</title>
 </head>
 
@@ -31,6 +34,11 @@
         let view = new View();
         let paddleCtrl = new PaddleCtrl(paddle, view);
         view.sceneLeft();
+        let ball = new Ball(new Position(400, 500), new Movement(3, -2));
+        view.displayBall(ball);
+        alert("Prêt à faire bouger la balle ?");
+        ball.move();
+        view.displayBall(ball);
     </script>
 
 </body>

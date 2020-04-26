@@ -13,7 +13,7 @@ class Position {
     }
 
     /**
-     * Simple getter of x.
+     * Simple getter of _x.
      * @returns {number} x - the horizontal positioning of the bale.
      */
     get x() {
@@ -21,7 +21,7 @@ class Position {
     }
 
     /**
-     * Simple getter of y.
+     * Simple getter of _y.
      * @returns {number} y - the vertical positioning of the bale.
      */
     get y() {
@@ -29,7 +29,7 @@ class Position {
     }
 
     /**
-     * Simple setter of x.
+     * Simple setter of _x.
      * @param {number} value - an integer that represents 
      * the horizontal positioning.
      */
@@ -38,7 +38,7 @@ class Position {
     }
 
     /**
-     * Simple setter of y.
+     * Simple setter of _y.
      * @param {number} value - an integer that represents 
      * the vertical positioning.
      */
