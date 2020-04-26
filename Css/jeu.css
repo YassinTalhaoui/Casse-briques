@@ -56,3 +56,14 @@ main{
     margin-top: 584px;
     
 }
+
+#ball{
+
+    background-color: rgb(9, 45, 160) ;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    position: absolute ;
+    margin-left: 450px;
+    margin-top: 300px;
+}
