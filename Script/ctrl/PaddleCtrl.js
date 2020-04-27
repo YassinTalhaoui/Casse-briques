@@ -1,5 +1,5 @@
 /**
- * Controller for the paddle movement.
+ * Controller for the paddle movements.
  * It make it follow the mouse.
  */
 class PaddleCtrl {
