@@ -35,6 +35,8 @@ class BallCtrl {
      * Stops the ball.
      */
     stop() {
+        
         clearInterval(this._moveListener);
+      
     }
 }

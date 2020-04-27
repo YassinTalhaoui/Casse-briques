@@ -46,4 +46,18 @@ class Movement {
     set deltaY(value) {
         this._deltaY = value;
     }
+
+    /**
+     * Reverses the horizontal direction of the ball.
+     */
+    reverseX(){
+        this._deltaX= -this._deltaX; 
+    }
+
+    /**
+     * Reverses the vertical direction of the ball.
+     */
+    reverseY(){
+        this._deltaY= -this.deltaY;
+    }
 }

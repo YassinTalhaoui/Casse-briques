@@ -23,7 +23,6 @@ class View {
     * on the left edge of the navy window.
     */
    sceneLeft() {
-
       console.log(document.getElementById("scene").offsetLeft);
    }
 
@@ -37,6 +36,7 @@ class View {
       console.log(ball.position.x + "px");
       document.getElementById("ball").style.marginTop = ball.position.y + "px";
       console.log(ball.position.y + "px");
+     
    }
 
 }
