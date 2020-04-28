@@ -34,13 +34,11 @@ class Ball {
      * its movement
      */
     move() {
-        ball.position.x += ball.movement.deltaX;
-        // ball.position.x = ball.position.x + ball.movement.deltaX;
-        // ball.position.y = ball.position.y + ball.movement.deltaY;
-        ball.position.y += ball.movement.deltaY;
-        ball.bounceHorizontal();
-        ball.bounceVertical();
-        return new Position(ball.position.x, ball.position.y);
+        game.ball.position.x += game.ball.movement.deltaX;
+        game.ball.position.y += game.ball.movement.deltaY;
+        game.ball.bounceHorizontal();
+        game.ball.bounceVertical();
+        return new Position(game.ball.position.x, game.ball.position.y);
     }
 
     /**
@@ -48,7 +46,7 @@ class Ball {
     * left side of the playing area.
     */
     bounceHorizontal() {
-        if (ball.position.x + ball.movement.deltaX < 0 || ball.position.x + ball.movement.deltaX > 941) { //970 - 24-5
+        if (game.ball.position.x + game.ball.movement.deltaX < 0 || game.ball.position.x + game.ball.movement.deltaX > 941) { //970 - 24 - 5
             this._movement.reverseX();
         }
     }
@@ -58,7 +56,7 @@ class Ball {
      * south side of the playing area.
      */
     bounceVertical() {
-        if (ball.position.y + ball.movement.deltaY < 0 || ball.position.y + ball.movement.deltaY > 579) { //600 -24-5
+        if (game.ball.position.y + game.ball.movement.deltaY < 0 || game.ball.position.y + game.ball.movement.deltaY > 579) { //600 - 24 - 5
             this._movement.reverseY();
         }
     }

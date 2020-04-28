@@ -6,7 +6,7 @@ class View {
    /**
     * Modifies the css according to the left of the received paddle in order to
     * that the racket is positioned in the right place.
-    * @param {Paddle} paddle : the Paddle.
+    * @param {Paddle} paddle - the Paddle.
     */
    displayPaddle(paddle) {
       if (paddle.left <= 0) {             //Limite gauche de ma scene.
@@ -15,7 +15,6 @@ class View {
          document.getElementById("raquette").style.marginLeft = 864 + "px";
       } else
          document.getElementById("raquette").style.marginLeft = paddle.left + "px";
-      console.log(paddle.left + "px");
    }
 
    /**
@@ -32,11 +31,7 @@ class View {
     * @param {Ball} ball - the ball.
     */
    displayBall(ball) {
-      document.getElementById("ball").style.marginLeft = ball.position.x + "px";
-      console.log(ball.position.x + "px");
-      document.getElementById("ball").style.marginTop = ball.position.y + "px";
-      console.log(ball.position.y + "px");
-     
+      document.getElementById("ball").style.marginLeft = game.ball.position.x + "px";
+      document.getElementById("ball").style.marginTop = game.ball.position.y + "px";
    }
-
 }

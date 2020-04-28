@@ -6,13 +6,13 @@ class BallCtrl {
 
     /**
      * Constructor of BallCtrl.
-     * @param {Ball} ball - the ball to control.
+     * @param {Game} game - the ball to control.
      * @param {View} view - the view.
      */
-    constructor(ball, view) {
-        this._ball = ball;
+    constructor(game, view) {
+        this._game = game;
         this._view = view;
-        view.displayBall(ball);
+        view.displayBall(game._ball);
     }
 
     /**
@@ -27,7 +27,7 @@ class BallCtrl {
      * and refreshes the view.
      */
     move() {
-        this._ball.move();
+        game._ball.move();
         this._view.displayBall(this._ball);
     }
 
@@ -35,8 +35,6 @@ class BallCtrl {
      * Stops the ball.
      */
     stop() {
-        
         clearInterval(this._moveListener);
-      
     }
 }

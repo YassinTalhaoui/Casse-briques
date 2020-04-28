@@ -50,14 +50,14 @@ class Movement {
     /**
      * Reverses the horizontal direction of the ball.
      */
-    reverseX(){
-        this._deltaX= -this._deltaX; 
+    reverseX() {
+        this._deltaX = -this._deltaX;
     }
 
     /**
      * Reverses the vertical direction of the ball.
      */
-    reverseY(){
-        this._deltaY= -this.deltaY;
+    reverseY() {
+        this._deltaY = -this._deltaY;
     }
 }

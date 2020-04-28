@@ -13,7 +13,7 @@ class Paddle {
 
     /**
      * Simple getter of _left.
-     * @returns _left.
+     * @returns {number} _left.
      */
     get left() {
         return this._left;

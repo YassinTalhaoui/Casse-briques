@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/jeu.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../Script/model/constants.js"></script>
     <script src="../Script/model/Paddle.js"></script>
     <script src="../Script/view/View.js"></script>
     <script src="../Script/ctrl/PaddleCtrl.js"></script>
-    <script src="../Script/model/constants.js"></script>
     <script src="../Script/model/Ball.js"></script>
     <script src="../Script/model/Movement.js"></script>
     <script src="../Script/model/Position.js"></script>
     <script src="../Script/ctrl/BallCtrl.js"></script>
+    <script src="../Script/model/Game.js"></script>
+    <script src="../Script/ctrl/GameCtrl.js"></script>
     <title>Casse-Brique</title>
 </head>
-
 <body>
     <header>
         <h1>Casse Brique !</h1>
         <h3>Webg2 - g54892 - YASSIN TALHAOUI</h3>
     </header>
-
     <main>
         <div id="scene">
             <span id="raquette"></span>
             <span id="ball"></span>
         </div>
     </main>
-
     <script>
-        let paddle = new Paddle(300);
+        let game = new Game();
         let view = new View();
-        let paddleCtrl = new PaddleCtrl(paddle, view);
-        view.sceneLeft();
-        let ball = new Ball(new Position(400, 500), new Movement(3, -2));
-        view.displayBall(ball);
-        let ballCtrl = new BallCtrl(ball,view);
-        ballCtrl.start(); // Démarre la balle
-        //ballCtrl.stop(); // Pour l’arrêter 
+        let gameCtrl = new GameCtrl(game, view);
+        gameCtrl.play();
     </script>
-
 </body>
-
 </html>
