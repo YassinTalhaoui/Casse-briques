@@ -31,7 +31,7 @@ class View {
     * @param {Ball} ball - the ball.
     */
    displayBall(ball) {
-      document.getElementById("ball").style.marginLeft = game.ball.position.x + "px";
+      document.getElementById("ball").style.marginLeft = game.ball.position.x + "px"; 
       document.getElementById("ball").style.marginTop = game.ball.position.y + "px";
    }
 }

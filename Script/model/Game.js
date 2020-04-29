@@ -1,5 +1,5 @@
 /**
- * This class is the entry point to all classes of the model.
+ * This class is the entry point to all classes of the model. 
  */
 class Game {
 
@@ -8,21 +8,21 @@ class Game {
      */
     constructor() {
         this._paddle = new Paddle(0);               
-        this._ball = new Ball(new Position(this.entierAleatoire(0, 941), 579), new Movement(this.entierAleatoire(-3, 3), -1));
+        this._ball = new Ball(new Position(this.randomInteger(0, 941),579), new Movement(this.randomInteger(-2, 2),-1));
     }
 
     /**
      * Simple getter of paddle.
      * @returns {Paddle} the paddle of the game.
      */
-    get paddle() {
+    get paddle() { 
         return this._paddle;
     }
 
     /**
-    * Simple getter of paddle.
-    * @returns {Ball} the ball of the game.
-    */
+     * Simple getter of paddle.
+     * @returns {Ball} the ball of the game.
+     */
     get ball() {
         return this._ball;
     }
@@ -49,7 +49,7 @@ class Game {
      * @param {number} max - the maximum.
      * @returns the random integer.
      */
-    entierAleatoire(min, max) {
+    randomInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 }

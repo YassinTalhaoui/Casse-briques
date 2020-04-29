@@ -58,6 +58,6 @@ class Movement {
      * Reverses the vertical direction of the ball.
      */
     reverseY() {
-        this._deltaY = -this._deltaY;
+        this._deltaY = -this._deltaY; 
     }
 }

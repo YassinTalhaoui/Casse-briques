@@ -1,4 +1,4 @@
-/**
+/** 
  * This class represents the paddle of the game.
  */
 class Paddle {

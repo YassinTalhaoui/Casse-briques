@@ -38,13 +38,14 @@ class Ball {
         game.ball.position.y += game.ball.movement.deltaY;
         game.ball.bounceHorizontal();
         game.ball.bounceVertical();
+        game.ball.bounceOnRacket();
         return new Position(game.ball.position.x, game.ball.position.y);
     }
 
     /**
-    * Reverses the horizontal direction if the ball bounces the right or
-    * left side of the playing area.
-    */
+     * Reverses the horizontal direction if the ball bounces the right or
+     * left side of the playing area.
+     */
     bounceHorizontal() {
         if (game.ball.position.x + game.ball.movement.deltaX < 0 || game.ball.position.x + game.ball.movement.deltaX > 941) { //970 - 24 - 5
             this._movement.reverseX();
@@ -58,6 +59,17 @@ class Ball {
     bounceVertical() {
         if (game.ball.position.y + game.ball.movement.deltaY < 0 || game.ball.position.y + game.ball.movement.deltaY > 579) { //600 - 24 - 5
             this._movement.reverseY();
+        }
+    }
+
+    /**
+     * Make that the ball can bounce on the racket.
+     */
+    bounceOnRacket() {
+        if (game.ball.position.x + game.ball.movement.deltaX >= document.getElementById("raquette").offsetLeft - 152  //152 est le offsetLeft de ma scene.
+            && document.getElementById("raquette").offsetLeft - 152 + racketWidth >= game.ball.position.x
+            + game.ball.movement.deltaX && game.ball.position.y + game.ball.movement.deltaY > 563) {  //563 est la position du cotés superieur de ma raquette
+            this._movement.reverseY();                                                                //par rapport a la scene. (579-16)
         }
     }
 }

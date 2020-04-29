@@ -1,5 +1,5 @@
 /**
- * Controller for the movements of the ball.
+ * Controller for the movements of the ball. 
  * Suggests methods for starting/stopping the ball and making it move
  */
 class BallCtrl {

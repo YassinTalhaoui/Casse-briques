@@ -33,7 +33,7 @@ class Position {
      * @param {number} value - an integer that represents 
      * the horizontal positioning.
      */
-    set x(value) {
+    set x(value) { 
         this._x = value;
     }
 
