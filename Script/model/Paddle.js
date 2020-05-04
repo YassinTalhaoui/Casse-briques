@@ -1,31 +1,15 @@
 /** 
  * This class represents the paddle of the game.
  */
-class Paddle {
+class Paddle extends Sprite {
 
-    /**
-     * Constructor of Paddle.
-     * @param {number} left - an integer.
-     */
-    constructor(left) {
-        this._left = left;
-    }
-
-    /**
-     * Simple getter of _left.
-     * @returns {number} _left.
-     */
-    get left() {
-        return this._left;
-    }
-
-    /**
-     * Returns the new position of the racket in relation to
-     * the left edge of the scene. 
-     * @param {number} val - an integer.
-     */
-    moveTo(val) {
-        this._left = val;
-        return this._left;
-    }
+  /**
+   * Returns the new position of the racket in relation to
+   * the left edge of the scene. 
+   * @param {number} val - an integer.
+   */
+  moveTo(val) {
+    this._topLeft._x = val;
+    return this._topLeft._x;
+  }
 }

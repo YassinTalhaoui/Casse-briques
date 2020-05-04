@@ -9,12 +9,12 @@ class View {
     * @param {Paddle} paddle - the Paddle.
     */
    displayPaddle(paddle) {
-      if (paddle.left <= 0) {             //Limite gauche de ma scene.
+      if (paddle._topLeft._x <= 0) {             //Limite gauche de ma scene.
          document.getElementById("raquette").style.marginLeft = 0 + "px";
-      } else if (paddle.left >= 864) {    //Limite droite de ma scene.
+      } else if (paddle._topLeft._x >= 864) {    //Limite droite de ma scene.
          document.getElementById("raquette").style.marginLeft = 864 + "px";
       } else
-         document.getElementById("raquette").style.marginLeft = paddle.left + "px";
+         document.getElementById("raquette").style.marginLeft = paddle._topLeft._x + "px";
    }
 
    /**
@@ -31,7 +31,35 @@ class View {
     * @param {Ball} ball - the ball.
     */
    displayBall(ball) {
-      document.getElementById("ball").style.marginLeft = game.ball.position.x + "px"; 
-      document.getElementById("ball").style.marginTop = game.ball.position.y + "px";
+      document.getElementById("ball").style.marginLeft = game.ball._topLeft._x + "px";
+      document.getElementById("ball").style.marginTop = game.ball._topLeft._y + "px";
+   }
+
+   /**
+    * Dynamically adds a sprite to the playing area.
+    * @param {Sprite} sprite - a sprite.
+    */
+   add(sprite) {
+   }
+
+   /**
+    * Modifies the visual position of the sprite according to its topLeft attribute.
+    * @param {Sprite} sprite - a sprite.
+    */
+   update(sprite) {
+   }
+
+   /**
+    * Adds an array of sprites that will be the wall 
+    * @param {Sprite} sprite - a sprite.
+    */
+   addAll(sprite) {
+   }
+
+   /**
+    * Update the score display
+    * @param {number} score - an integer that rapresents the player's score.
+    */
+   updateScore(score) {
    }
 }

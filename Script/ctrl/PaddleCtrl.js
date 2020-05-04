@@ -2,7 +2,7 @@
  * Controller for the paddle movements.
  * It make it follow the mouse.
  */
-class PaddleCtrl { 
+class PaddleCtrl {
 
     /**
      * Display the paddle and start controlling it with the mouse.
@@ -23,8 +23,8 @@ class PaddleCtrl {
      */
     moveMouse(paddle, view, evt) {
         let val = evt.clientX - document.getElementById("scene").offsetLeft - 5
-            - racketWidth / 2;                                                                                                      // 
-        paddle = new Paddle(val);
+            - game._paddle.dimension.width / 2;
+        paddle = new Paddle(new Position(val, 584), new Dimension(96, 16));
         view.displayPaddle(paddle);
     }
 }
